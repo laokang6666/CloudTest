@@ -13,4 +13,7 @@ public interface BookFeignClient {
 
     @PostMapping("/{id}/borrow")
     BookRemoteResponse borrowOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
+
+    @PostMapping("/{id}/return")
+    BookRemoteResponse returnOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
 }

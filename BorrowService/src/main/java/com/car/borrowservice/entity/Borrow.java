@@ -36,6 +36,9 @@ public class Borrow {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
+    @Column(name = "returned_at")
+    private LocalDateTime returnedAt;
+
     @PrePersist
     void prePersist() {
         if (createdAt == null) {

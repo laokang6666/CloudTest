@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 
 @Service
@@ -94,13 +95,57 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
         return toResponse(borrow);
     }
 
+    @Override
+    @Transactional
+    public BorrowResponse returnBorrow(Long borrowId) {
+        Borrow borrow = borrowRepository.findById(borrowId)
+                .orElseThrow(() -> new BorrowDomainException(
+                        HttpStatus.NOT_FOUND,
+                        BorrowErrorCode.BORROW_NOT_FOUND.getCode(),
+                        BorrowErrorCode.BORROW_NOT_FOUND.getMessage()));
+        // 已归还
+        if (borrow.getReturnedAt() != null) {
+            throw new BorrowDomainException(
+                    HttpStatus.CONFLICT,
+                    BorrowErrorCode.BORROW_ALREADY_RETURNED.getCode(),
+                    BorrowErrorCode.BORROW_ALREADY_RETURNED.getMessage());
+        }
+
+        try {
+            bookFeignClient.returnOne(borrow.getBookId(), Collections.emptyMap());
+        } catch (FeignException e) {
+            int status = e.status();
+            if (status == 404) {
+                throw new BorrowDomainException(
+                        HttpStatus.NOT_FOUND,
+                        BorrowErrorCode.BOOK_NOT_FOUND.getCode(),
+                        BorrowErrorCode.BOOK_NOT_FOUND.getMessage());
+            }
+            if (status == 409) {
+                throw new BorrowDomainException(
+                        HttpStatus.CONFLICT,
+                        BorrowErrorCode.STOCK_AT_CAPACITY.getCode(),
+                        BorrowErrorCode.STOCK_AT_CAPACITY.getMessage());
+            }
+            throw new BorrowDomainException(
+                    HttpStatus.BAD_GATEWAY,
+                    BorrowErrorCode.REMOTE_BOOK_ERROR.getCode(),
+                    BorrowErrorCode.REMOTE_BOOK_ERROR.getMessage() + ": " + e.getMessage());
+        }
+
+        borrow.setReturnedAt(LocalDateTime.now());
+        Borrow saved = borrowRepository.save(borrow);
+        return toResponse(saved);
+    }
+
     private BorrowResponse toResponse(Borrow borrow) {
         return new BorrowResponse(
                 borrow.getId(),
                 borrow.getUserId(),
                 borrow.getBookId(),
                 borrow.getQuantity(),
-                borrow.getCreatedAt()
+                borrow.getCreatedAt(),
+                borrow.getReturnedAt()
         );
     }
 }

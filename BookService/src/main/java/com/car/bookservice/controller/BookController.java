@@ -40,4 +40,9 @@ public class BookController {
     public ResponseEntity<BookResponse> borrow(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
         return ResponseEntity.ok(bookCatalogService.borrowOne(id));
     }
+
+    @PostMapping("/{id}/return")
+    public ResponseEntity<BookResponse> returnBook(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
+        return ResponseEntity.ok(bookCatalogService.returnOne(id));
+    }
 }

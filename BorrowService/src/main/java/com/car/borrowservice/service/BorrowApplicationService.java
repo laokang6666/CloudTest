@@ -8,4 +8,6 @@ public interface BorrowApplicationService {
     BorrowResponse createBorrow(CreateBorrowRequest request);
 
     BorrowResponse getBorrow(Long id);
+
+    BorrowResponse returnBorrow(Long borrowId);
 }

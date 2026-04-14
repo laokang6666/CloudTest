@@ -10,4 +10,6 @@ public interface BookCatalogService {
     BookResponse getBook(Long id);
 
     BookResponse borrowOne(Long bookId);
+
+    BookResponse returnOne(Long bookId);
 }

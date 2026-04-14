@@ -11,4 +11,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("update Book b set b.availableStock = b.availableStock - 1 where b.id = :id and b.availableStock > 0")
     int decreaseAvailableStock(@Param("id") Long id);
+
+    @Modifying(clearAutomatically = true, flushAutomatically = true)
+    @Query("update Book b set b.availableStock = b.availableStock + 1 where b.id = :id and b.availableStock < b.totalStock")
+    int increaseAvailableStock(@Param("id") Long id);
 }

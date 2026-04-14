@@ -54,6 +54,22 @@ public class BookCatalogServiceImpl implements BookCatalogService {
         return toResponse(book);
     }
 
+    @Override
+    @Transactional
+    public BookResponse returnOne(Long bookId) {
+        if (!bookRepository.existsById(bookId)) {
+            throw new DomainException(HttpStatus.NOT_FOUND, "BOOK_NOT_FOUND", "图书不存在");
+        }
+        int updated = bookRepository.increaseAvailableStock(bookId);
+        if (updated == 0) {
+            // 可用超过了总数
+            throw new DomainException(HttpStatus.CONFLICT, "STOCK_AT_CAPACITY", "可借册数已达总册上限");
+        }
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new DomainException(HttpStatus.NOT_FOUND, "BOOK_NOT_FOUND", "图书不存在"));
+        return toResponse(book);
+    }
+
     private BookResponse toResponse(Book book) {
         return new BookResponse(
                 book.getId(),

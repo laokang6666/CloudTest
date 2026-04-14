@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/borrows")
 public class BorrowController {
@@ -32,5 +34,12 @@ public class BorrowController {
     @GetMapping("/{id}")
     public ResponseEntity<BorrowResponse> get(@PathVariable Long id) {
         return ResponseEntity.ok(borrowApplicationService.getBorrow(id));
+    }
+
+    @PostMapping("/{id}/return")
+    public ResponseEntity<BorrowResponse> returnBorrow(
+            @PathVariable Long id,
+            @RequestBody(required = false) Map<String, Object> ignored) {
+        return ResponseEntity.ok(borrowApplicationService.returnBorrow(id));
     }
 }
