@@ -1,6 +1,7 @@
 package com.car.borrowservice.client;
 
 import com.car.borrowservice.client.dto.BookRemoteResponse;
+import com.car.borrowservice.config.MyCustomLoadBalancerConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

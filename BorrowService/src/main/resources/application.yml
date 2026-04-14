@@ -16,6 +16,9 @@ spring:
         namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       username: nacos
       password: Wzq20030828
+    loadbalancer:
+      eager-load:
+        clients: user-service, book-service #饥饿加载
   profiles:
     active: dev
   config:

@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a2609101-2fc2-4eb4-b417-b9820d382373.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a2609101-2fc2-4eb4-b417-b9820d382373.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/config/MyCustomLoadBalancerConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/service/BookCatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/service/BookCatalogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/service/impl/BookCatalogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/service/impl/BookCatalogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/BorrowServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/BorrowServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/config/NacosConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/config/NacosConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/dto/BorrowResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/dto/BorrowResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/entity/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/entity/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/enums/BorrowErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/enums/BorrowErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/runner/NacosInstanceListenRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/runner/NacosInstanceListenRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/BorrowApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/BorrowApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +208,7 @@
       <workItem from="1776050442813" duration="1387000" />
       <workItem from="1776051843718" duration="36601000" />
       <workItem from="1776152314757" duration="1580000" />
-      <workItem from="1776153924154" duration="4088000" />
+      <workItem from="1776153924154" duration="6546000" />
     </task>
     <servers />
   </component>
