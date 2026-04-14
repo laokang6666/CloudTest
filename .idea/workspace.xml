@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\repository\repository" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.9.14\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3CHbzazRLq7aPnOG23h1RHPvdwv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.BookService [clean].executor": "Run",
+    "Maven.BookService [compile].executor": "Run",
+    "Maven.BookService [install].executor": "Run",
+    "Maven.UserService [clean].executor": "Run",
+    "Maven.UserService [install].executor": "Run",
+    "Maven.cloudTest [clean].executor": "Run",
+    "Maven.cloudTest [compile].executor": "Run",
+    "Maven.cloudTest [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BookServiceApplication (1).executor": "Debug",
+    "Spring Boot.BookServiceApplication (2).executor": "Debug",
+    "Spring Boot.BookServiceApplication.executor": "Debug",
+    "Spring Boot.BorrowServiceApplication.executor": "Debug",
+    "Spring Boot.GatewayServiceApplication.executor": "Debug",
+    "Spring Boot.UserServiceApplication (1).executor": "Debug",
+    "Spring Boot.UserServiceApplication (2).executor": "Debug",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaProject/cloudTest",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="GatewayServiceApplication" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="BookServiceApplication" value="STOPPED" />
+              <entry key="BookServiceApplication (1)" value="STOPPED" />
+              <entry key="BookServiceApplication (2)" value="STOPPED" />
+              <entry key="BorrowServiceApplication" value="STOPPED" />
+              <entry key="GatewayServiceApplication" value="STOPPED" />
+              <entry key="UserServiceApplication" value="STOPPED" />
+              <entry key="UserServiceApplication (1)" value="FAILED" />
+              <entry key="UserServiceApplication (2)" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication (1)">
+    <configuration name="BookServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="BookService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.bookservice.BookServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8086" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="BookService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.bookservice.BookServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8084" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="BookService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.bookservice.BookServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorrowServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BorrowService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.borrowservice.BorrowServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="GatewayService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="UserService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.userservice.UserServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8088" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="UserService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.userservice.UserServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8085" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="UserService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.car.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BookServiceApplication" />
+      <item itemvalue="Spring Boot.BookServiceApplication (2)" />
+      <item itemvalue="Spring Boot.BookServiceApplication (1)" />
+      <item itemvalue="Spring Boot.BorrowServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication (2)" />
+      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="" />
+      <created>1776045708948</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776045708948</updated>
+      <workItem from="1776045710111" duration="2153000" />
+      <workItem from="1776050237431" duration="173000" />
+      <workItem from="1776050442813" duration="1387000" />
+      <workItem from="1776051843718" duration="36601000" />
+      <workItem from="1776152314757" duration="1580000" />
+      <workItem from="1776153924154" duration="571000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

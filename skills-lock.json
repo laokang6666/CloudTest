@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "skills": {
+    "java-architect": {
+      "source": "Jeffallan/claude-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "computedHash": "88a601632c7e1ce2788e31123fdf96050c8f45bcd2bf89b299a16965bb3e92df"
+    },
+    "p10": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "926db72348c3ee94fe1e7d732f0933628464b0acc596485ef11b23361db4f9ad"
+    },
+    "pro": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "c246b30c25c688ea14dea7707e5f3d4b3b6268e7319b06f4e5111a3c911979d9"
+    },
+    "proj-analyze-design": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "4413e373a0899bdf0021e43ca7a050672be7251c7d9043cfe5fd0eb7eaab4961"
+    },
+    "proj-analyze-req": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "82c08c653df294078c6cc9e034b6a08c715ced7026a0e4606d676163cff49366"
+    },
+    "proj-change": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "fb98386e271a39b75e8f958a237ffdc7d73e05cbe7c9b60531f1446f0986f49f"
+    },
+    "proj-common": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "5b41eb2b3f4be863e5551e823a8df0f6f425a4703acb4df3d9b3589d55113565"
+    },
+    "proj-deploy": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "63572b0dc5c4f435622fef94d3325277bbdbd170554ec0d9571ac609dd1fd557"
+    },
+    "proj-fix": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "bdc200e345d5017642752c55100c2a8ca136b03eb1d060a542418c9658a19f7e"
+    },
+    "proj-gen": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "0410db9b37ca5ef715cc1774306cb2732462448b600bebb0d7ff55f498763f66"
+    },
+    "proj-gen-test": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "ac473de69ef9f2d6d35f699cfb7d9a1d7cb6c69a9e38b7f19000ceb05210fe4a"
+    },
+    "proj-optimize": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "a4204c3915602bceba7940246392e1d264f3da2582affc0ace40cd6f34a7cc87"
+    },
+    "proj-refactor": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "8ebb3e39b334720ecc986e0e4b96a13e2330cab4f76a1946e3067ffc6d7bcd5d"
+    },
+    "proj-resume": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "b07a7b596bef359d6687b9f7ff319dbd5dd21a2336e452c6f56424888567e4e2"
+    },
+    "proj-review": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "4970d91a98a280191977691401faec3f92988c9afae35e1d58e25c19a086e5ed"
+    },
+    "proj-sync-doc": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "8472467c4d5b8755b357e1293bfb235fadd3a9e91bf1179bb3c0b19866f2edbe"
+    },
+    "proj-task": {
+      "source": "zhangloveyan/backend-skill",
+      "sourceType": "github",
+      "computedHash": "552155ea6bf4856a4bba11f07fe4c6b410f88e39c6f248dfec0f6bb197275758"
+    },
+    "yes": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "8bc47d05bb613345caafb19d6e92f23a9ab9df088c0d7b870a88a23fd79e554c"
+    }
+  }
+}
