@@ -14,9 +14,12 @@ spring:
         import-check:
           enabled: true
         namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+        refresh-enabled: true
       username: nacos
       password: Wzq20030828
     loadbalancer:
+      cache:
+        enabled: false # 禁用 choose 结果缓存，配置刷新后选路立即按新策略生效
       eager-load:
         clients: user-service, book-service #饥饿加载
   profiles:
@@ -26,5 +29,6 @@ spring:
       - optional:nacos:borrow-service-dev.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       - optional:nacos:borrow-db.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       - optional:nacos:management.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+      - optional:nacos:book-exclude-ports.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
 server:
   port: 8083
