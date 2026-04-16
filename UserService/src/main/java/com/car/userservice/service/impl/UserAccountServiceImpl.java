@@ -6,6 +6,7 @@ import com.car.userservice.entity.User;
 import com.car.userservice.exception.DomainException;
 import com.car.userservice.repository.UserRepository;
 import com.car.userservice.service.UserAccountService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,10 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
-    private final UserRepository userRepository;
+    private static int a = 0;
 
-    public UserAccountServiceImpl(UserRepository userRepository) {
+    private final UserRepository userRepository;
+    private final int port;
+
+    public UserAccountServiceImpl(UserRepository userRepository, @Value("${server.port}") int port) {
         this.userRepository = userRepository;
+        this.port = port;
     }
 
     @Override
@@ -37,6 +42,10 @@ public class UserAccountServiceImpl implements UserAccountService {
     @Override
     @Transactional(readOnly = true)
     public UserResponse getUser(Long id) {
+        if (a < 8) {
+            a++;
+            throw new DomainException(HttpStatus.NOT_IMPLEMENTED, String.valueOf(port), "系统繁忙");
+        }
         return userRepository.findById(id)
                 .map(this::toResponse)
                 .orElseThrow(() -> new DomainException(HttpStatus.NOT_FOUND, "USER_NOT_FOUND", "用户不存在"));

@@ -1,23 +1,80 @@
 spring:
   application:
-    name: GatewayService
+    name: gateway-service
   cloud:
     nacos:
+      username: nacos
+      password: Wzq20030828
       discovery:
         server-addr: 127.0.0.1:8848
         fail-fast: false
-    # gateway:
-    #   routes:
-    #     - id: user-route
-    #       uri: lb://UserService
-    #       predicates:
-    #         - Path=/api/user/**
+        namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+      config:
+        server-addr: 127.0.0.1:8848
+        fail-fast: false
+        import-check:
+          enabled: false
+        namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+    gateway:
+      server:
+        webflux:
+          # 转发下游时的 HTTP 超时（全局，可按需在路由 metadata 覆盖）
+          httpclient:
+            connect-timeout: 5000 # 建立连接超时（毫秒）
+            response-timeout: 10s # 从发起到收完响应体的整体超时（Duration）
+          default-filters:
+            - name: CircuitBreaker
+              args:
+                name: globalCircuitBreaker
+                fallbackUri: http://localhost:8087/gateway/fallback
+                statusCodes:
+                  - 501
+          routes:
+            - id: user-api-route
+              uri: lb://user-service
+              predicates:
+                - Path=/api/users/**
+              filters:
+                - JwtAuth
+            - id: user-auth-route
+              uri: lb://user-service
+              predicates:
+                - Path=/api/auth/**
+            - id: book-api-route
+              uri: lb://book-service
+              predicates:
+                - Path=/api/books/**
+              filters:
+                - JwtAuth
+            - id: borrow-api-route
+              uri: lb://borrow-service
+              predicates:
+                - Path=/api/borrows/**
+              filters:
+                - JwtAuth
+  profiles:
+    active: dev
+  config:
+    import:
+      - optional:nacos:management.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+      - optional:nacos:jwt.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+
+gateway:
+  access-log:
+    enabled: true
 
 server:
-  port: 8080
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,prometheus
+  port: 8087
+resilience4j:
+  circuitbreaker:
+    instances:
+      globalCircuitBreaker:
+        sliding-window-type: TIME_BASED
+        sliding-window-size: 10                     # 滑动窗口大小（秒）
+        minimum-number-of-calls: 10                  # 触发熔断的最小请求数
+        failure-rate-threshold: 50                  # 失败率阈值（%）
+        wait-duration-in-open-state: 10000            # 熔断开启后的等待时间（毫秒）
+        permitted-number-of-calls-in-half-open-state: 5  # 半开状态下允许通过的请求数
+        max-wait-duration-in-half-open-state: 20000
+        record-exceptions:
+          - java.lang.Exception

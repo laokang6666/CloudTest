@@ -3,6 +3,8 @@ spring:
     name: borrow-service
   cloud:
     nacos:
+      username: nacos
+      password: Wzq20030828
       discovery:
         server-addr: 127.0.0.1:8848
         fail-fast: false
@@ -15,8 +17,6 @@ spring:
           enabled: true
         namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
         refresh-enabled: true
-      username: nacos
-      password: Wzq20030828
     loadbalancer:
       cache:
         enabled: false # 禁用 choose 结果缓存，配置刷新后选路立即按新策略生效
