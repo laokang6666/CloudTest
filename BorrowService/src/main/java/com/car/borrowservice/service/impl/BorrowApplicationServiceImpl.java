@@ -9,16 +9,22 @@ import com.car.borrowservice.enums.BorrowErrorCode;
 import com.car.borrowservice.exception.BorrowDomainException;
 import com.car.borrowservice.repository.BorrowRepository;
 import com.car.borrowservice.service.BorrowApplicationService;
+import com.car.common.api.R;
 import feign.FeignException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Date;
 
 @Service
 public class BorrowApplicationServiceImpl implements BorrowApplicationService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(BorrowApplicationServiceImpl.class);
 
     private final UserFeignClient userFeignClient;
     private final BookFeignClient bookFeignClient;
@@ -36,11 +42,12 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
     @Override
     @Transactional
     public BorrowResponse createBorrow(CreateBorrowRequest request) {
+        LOGGER.info("borrow 断点时间：{}",new Date());
         Long userId = request.getUserId();
         Long bookId = request.getBookId();
 
         try {
-            userFeignClient.getUser(userId);
+            assertRemoteSuccess(userFeignClient.getUser(userId), BorrowErrorCode.REMOTE_USER_ERROR);
         } catch (FeignException e) {
             if (e.status() == 404) {
                 throw new BorrowDomainException(
@@ -55,7 +62,7 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
         }
 
         try {
-            bookFeignClient.borrowOne(bookId, Collections.emptyMap());
+            assertRemoteSuccess(bookFeignClient.borrowOne(bookId, Collections.emptyMap()), BorrowErrorCode.REMOTE_BOOK_ERROR);
         } catch (FeignException e) {
             int status = e.status();
             if (status == 404) {
@@ -98,12 +105,16 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
     @Override
     @Transactional
     public BorrowResponse returnBorrow(Long borrowId) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Borrow borrow = borrowRepository.findById(borrowId)
                 .orElseThrow(() -> new BorrowDomainException(
                         HttpStatus.NOT_FOUND,
                         BorrowErrorCode.BORROW_NOT_FOUND.getCode(),
                         BorrowErrorCode.BORROW_NOT_FOUND.getMessage()));
-        // 已归还
         if (borrow.getReturnedAt() != null) {
             throw new BorrowDomainException(
                     HttpStatus.CONFLICT,
@@ -112,7 +123,9 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
         }
 
         try {
-            bookFeignClient.returnOne(borrow.getBookId(), Collections.emptyMap());
+            assertRemoteSuccess(
+                    bookFeignClient.returnOne(borrow.getBookId(), Collections.emptyMap()),
+                    BorrowErrorCode.REMOTE_BOOK_ERROR);
         } catch (FeignException e) {
             int status = e.status();
             if (status == 404) {
@@ -136,6 +149,14 @@ public class BorrowApplicationServiceImpl implements BorrowApplicationService {
         borrow.setReturnedAt(LocalDateTime.now());
         Borrow saved = borrowRepository.save(borrow);
         return toResponse(saved);
+    }
+
+    private static void assertRemoteSuccess(R r, BorrowErrorCode remoteFailureFallback) {
+        if (r == null || !r.isSuccess()) {
+            String msg = r != null && r.getMessage() != null ? r.getMessage() : remoteFailureFallback.getMessage();
+            String code = r != null && r.getCode() != null ? r.getCode() : remoteFailureFallback.getCode();
+            throw new BorrowDomainException(HttpStatus.BAD_GATEWAY, code, msg);
+        }
     }
 
     private BorrowResponse toResponse(Borrow borrow) {

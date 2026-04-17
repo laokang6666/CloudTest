@@ -4,6 +4,7 @@ import com.car.borrowservice.client.BookFeignClient;
 import com.car.borrowservice.client.UserFeignClient;
 import com.car.borrowservice.client.dto.BookRemoteResponse;
 import com.car.borrowservice.client.dto.UserRemoteResponse;
+import com.car.common.api.R;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import feign.FeignException;
 import feign.Request;
@@ -68,11 +69,11 @@ class BorrowControllerApiTest {
     @Test
     @DisplayName("POST /api/borrows/{id}/return 成功时返回 200 且 returnedAt 存在")
     void returnBorrow_ok() throws Exception {
-        when(userFeignClient.getUser(10L)).thenReturn(new UserRemoteResponse(10L, "u1", "U1", FIXED_AT));
+        when(userFeignClient.getUser(10L)).thenReturn(R.ok(new UserRemoteResponse(10L, "u1", "U1", FIXED_AT)));
         when(bookFeignClient.borrowOne(eq(20L), anyMap()))
-                .thenReturn(new BookRemoteResponse(20L, "Book", 5, 4, FIXED_AT));
+                .thenReturn(R.ok(new BookRemoteResponse(20L, "Book", 5, 4, FIXED_AT)));
         when(bookFeignClient.returnOne(eq(20L), anyMap()))
-                .thenReturn(new BookRemoteResponse(20L, "Book", 5, 5, FIXED_AT));
+                .thenReturn(R.ok(new BookRemoteResponse(20L, "Book", 5, 5, FIXED_AT)));
 
         String created = mockMvc.perform(post("/api/borrows")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -82,25 +83,25 @@ class BorrowControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long borrowId = objectMapper.readTree(created).get("id").asLong();
+        long borrowId = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/borrows/{id}/return", borrowId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(borrowId))
-                .andExpect(jsonPath("$.bookId").value(20))
-                .andExpect(jsonPath("$.returnedAt").exists());
+                .andExpect(jsonPath("$.body.id").value(borrowId))
+                .andExpect(jsonPath("$.body.bookId").value(20))
+                .andExpect(jsonPath("$.body.returnedAt").exists());
     }
 
     @Test
     @DisplayName("重复还书返回 409 BORROW_ALREADY_RETURNED")
     void returnBorrow_twice_secondConflict() throws Exception {
-        when(userFeignClient.getUser(11L)).thenReturn(new UserRemoteResponse(11L, "u2", "U2", FIXED_AT));
+        when(userFeignClient.getUser(11L)).thenReturn(R.ok(new UserRemoteResponse(11L, "u2", "U2", FIXED_AT)));
         when(bookFeignClient.borrowOne(eq(21L), anyMap()))
-                .thenReturn(new BookRemoteResponse(21L, "B", 3, 2, FIXED_AT));
+                .thenReturn(R.ok(new BookRemoteResponse(21L, "B", 3, 2, FIXED_AT)));
         when(bookFeignClient.returnOne(eq(21L), anyMap()))
-                .thenReturn(new BookRemoteResponse(21L, "B", 3, 3, FIXED_AT));
+                .thenReturn(R.ok(new BookRemoteResponse(21L, "B", 3, 3, FIXED_AT)));
 
         String created = mockMvc.perform(post("/api/borrows")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -110,7 +111,7 @@ class BorrowControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long borrowId = objectMapper.readTree(created).get("id").asLong();
+        long borrowId = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/borrows/{id}/return", borrowId)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -127,9 +128,9 @@ class BorrowControllerApiTest {
     @Test
     @DisplayName("图书归还远程 409 映射为 STOCK_AT_CAPACITY")
     void returnBorrow_bookRemote409() throws Exception {
-        when(userFeignClient.getUser(12L)).thenReturn(new UserRemoteResponse(12L, "u3", "U3", FIXED_AT));
+        when(userFeignClient.getUser(12L)).thenReturn(R.ok(new UserRemoteResponse(12L, "u3", "U3", FIXED_AT)));
         when(bookFeignClient.borrowOne(eq(22L), anyMap()))
-                .thenReturn(new BookRemoteResponse(22L, "B2", 2, 1, FIXED_AT));
+                .thenReturn(R.ok(new BookRemoteResponse(22L, "B2", 2, 1, FIXED_AT)));
         when(bookFeignClient.returnOne(eq(22L), anyMap())).thenThrow(feignExceptionWithStatus(409));
 
         String created = mockMvc.perform(post("/api/borrows")
@@ -140,7 +141,7 @@ class BorrowControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long borrowId = objectMapper.readTree(created).get("id").asLong();
+        long borrowId = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/borrows/{id}/return", borrowId)
                         .contentType(MediaType.APPLICATION_JSON)

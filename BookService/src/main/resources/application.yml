@@ -2,6 +2,12 @@ spring:
   application:
     name: book-service
   cloud:
+    # 限流：在 Sentinel 控制台按资源名配置流控规则（bookCreate / bookGet / bookBorrow / bookReturn）
+    # 熔断降级：本服务无对外 Feign；若仅做入口 QPS 保护，可不配 degrade。慢调用/异常比例保护可在控制台另配「降级规则」
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8090
+      eager: true
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848

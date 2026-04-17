@@ -1,6 +1,6 @@
 package com.car.borrowservice.client;
 
-import com.car.borrowservice.client.dto.UserRemoteResponse;
+import com.car.common.api.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UserFeignClient {
 
     @GetMapping("/{id}")
-    UserRemoteResponse getUser(@PathVariable("id") Long id);
+    R getUser(@PathVariable("id") Long id);
 }

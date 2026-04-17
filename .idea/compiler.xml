@@ -8,11 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BookService" />
+        <module name="shared-api" />
         <module name="UserService" />
         <module name="BorrowService" />
         <module name="GatewayService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-api" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -20,6 +24,8 @@
       <module name="BorrowService" options="-parameters" />
       <module name="GatewayService" options="-parameters" />
       <module name="UserService" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="shared-api" options="-parameters" />
     </option>
   </component>
 </project>

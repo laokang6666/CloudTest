@@ -2,6 +2,10 @@ spring:
   application:
     name: borrow-service
   cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8090
+      eager: true
     nacos:
       username: nacos
       password: Wzq20030828
@@ -12,7 +16,6 @@ spring:
         ephemeral: false
       config:
         server-addr: 127.0.0.1:8848
-        fail-fast: false
         import-check:
           enabled: true
         namespace: e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2

@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
 
@@ -42,9 +44,13 @@ public class UserAccountServiceImpl implements UserAccountService {
     @Override
     @Transactional(readOnly = true)
     public UserResponse getUser(Long id) {
-        if (a < 8) {
+        if (a < 5) {
             a++;
-            throw new DomainException(HttpStatus.NOT_IMPLEMENTED, String.valueOf(port), "系统繁忙");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
         return userRepository.findById(id)
                 .map(this::toResponse)

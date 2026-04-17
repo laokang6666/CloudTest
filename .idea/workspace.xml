@@ -5,18 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/config/LoadBalancerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/controller/FallbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/fallback/DefaultFallBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/handler/DefaultBlockHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/dto/ApiError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/test/java/com/car/bookservice/controller/BookControllerApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/test/java/com/car/bookservice/controller/BookControllerApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/UserFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/UserFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/dto/ApiError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GatewayService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/test/java/com/car/borrowservice/controller/BorrowControllerApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/test/java/com/car/borrowservice/controller/BorrowControllerApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/controller/FallbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/controller/FallbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/filter/security/JwtAuthGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/filter/security/JwtAuthGatewayFilterFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GatewayService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/dto/ApiError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/service/impl/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/service/impl/UserAccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/car/userservice/controller/AuthLoginIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/car/userservice/controller/AuthLoginIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug-d57cc0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +59,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -105,6 +133,18 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="UserServiceApplication (1)" />
+              <option value="UserServiceApplication (2)" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="configurationStatuses">
       <map>
         <entry key="SpringBootApplicationConfigurationType">
@@ -113,7 +153,7 @@
               <entry key="BookServiceApplication" value="STOPPED" />
               <entry key="BookServiceApplication (1)" value="STOPPED" />
               <entry key="BookServiceApplication (2)" value="STOPPED" />
-              <entry key="BorrowServiceApplication" value="FAILED" />
+              <entry key="BorrowServiceApplication" value="STOPPED" />
               <entry key="GatewayServiceApplication" value="STOPPED" />
               <entry key="UserServiceApplication" value="STOPPED" />
               <entry key="UserServiceApplication (1)" value="STOPPED" />
@@ -211,6 +251,8 @@
       <workItem from="1776153924154" duration="7166000" />
       <workItem from="1776161739140" duration="23893000" />
       <workItem from="1776302102523" duration="12293000" />
+      <workItem from="1776388189876" duration="12365000" />
+      <workItem from="1776404420396" duration="3055000" />
     </task>
     <servers />
   </component>
@@ -228,5 +270,27 @@
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
     <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/exception/GlobalExceptionHandler.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

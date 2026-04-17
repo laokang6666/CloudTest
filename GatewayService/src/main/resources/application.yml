@@ -26,7 +26,8 @@ spring:
             - name: CircuitBreaker
               args:
                 name: globalCircuitBreaker
-                fallbackUri: http://localhost:8087/gateway/fallback
+                # 使用 forward，在网关进程内转发；避免 http://localhost:8087/... 二次出站时仍携带原 HTTP 方法打到仅支持单方法的接口导致 405
+                fallbackUri: forward:/gateway/fallback
                 statusCodes:
                   - 501
           routes:
@@ -66,6 +67,10 @@ gateway:
 server:
   port: 8087
 resilience4j:
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 2s
   circuitbreaker:
     instances:
       globalCircuitBreaker:

@@ -1,8 +1,10 @@
 package com.car.bookservice.controller;
 
-import com.car.bookservice.dto.BookResponse;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.car.bookservice.dto.CreateBookRequest;
+import com.car.bookservice.sentinel.BookSentinelBlockHandler;
 import com.car.bookservice.service.BookCatalogService;
+import com.car.common.api.R;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,23 +28,38 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<BookResponse> create(@Valid @RequestBody CreateBookRequest request) {
-        BookResponse body = bookCatalogService.createBook(request);
-        return ResponseEntity.status(HttpStatus.CREATED).body(body);
+    @SentinelResource(
+            value = "bookCreate",
+            blockHandler = "blockCreate",
+            blockHandlerClass = BookSentinelBlockHandler.class)
+    public ResponseEntity<R> create(@Valid @RequestBody CreateBookRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(R.ok(bookCatalogService.createBook(request)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BookResponse> get(@PathVariable Long id) {
-        return ResponseEntity.ok(bookCatalogService.getBook(id));
+    @SentinelResource(
+            value = "bookGet",
+            blockHandler = "blockGet",
+            blockHandlerClass = BookSentinelBlockHandler.class)
+    public ResponseEntity<R> get(@PathVariable Long id) {
+        return ResponseEntity.ok(R.ok(bookCatalogService.getBook(id)));
     }
 
     @PostMapping("/{id}/borrow")
-    public ResponseEntity<BookResponse> borrow(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
-        return ResponseEntity.ok(bookCatalogService.borrowOne(id));
+    @SentinelResource(
+            value = "bookBorrow",
+            blockHandler = "blockBorrow",
+            blockHandlerClass = BookSentinelBlockHandler.class)
+    public ResponseEntity<R> borrow(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
+        return ResponseEntity.ok(R.ok(bookCatalogService.borrowOne(id)));
     }
 
     @PostMapping("/{id}/return")
-    public ResponseEntity<BookResponse> returnBook(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
-        return ResponseEntity.ok(bookCatalogService.returnOne(id));
+    @SentinelResource(
+            value = "bookReturn",
+            blockHandler = "blockReturn",
+            blockHandlerClass = BookSentinelBlockHandler.class)
+    public ResponseEntity<R> returnBook(@PathVariable Long id, @RequestBody(required = false) Map<String, Object> ignored) {
+        return ResponseEntity.ok(R.ok(bookCatalogService.returnOne(id)));
     }
 }

@@ -1,7 +1,7 @@
 package com.car.borrowservice.client;
 
-import com.car.borrowservice.client.dto.BookRemoteResponse;
 import com.car.borrowservice.config.MyCustomLoadBalancerConfiguration;
+import com.car.common.api.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,8 +13,8 @@ import java.util.Map;
 public interface BookFeignClient {
 
     @PostMapping("/{id}/borrow")
-    BookRemoteResponse borrowOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
+    R borrowOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
 
     @PostMapping("/{id}/return")
-    BookRemoteResponse returnOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
+    R returnOne(@PathVariable("id") Long id, @RequestBody Map<String, Object> body);
 }

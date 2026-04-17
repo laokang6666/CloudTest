@@ -31,9 +31,10 @@ class AuthLoginIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"loginName\":\"login_jwt_user\",\"password\":\"123456\"}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.tokenType").value("Bearer"))
-                .andExpect(jsonPath("$.token").isString())
-                .andExpect(jsonPath("$.token").value(org.hamcrest.Matchers.containsString(".")));
+                .andExpect(jsonPath("$.code").value("0"))
+                .andExpect(jsonPath("$.body.tokenType").value("Bearer"))
+                .andExpect(jsonPath("$.body.token").isString())
+                .andExpect(jsonPath("$.body.token").value(org.hamcrest.Matchers.containsString(".")));
     }
 
     @Test

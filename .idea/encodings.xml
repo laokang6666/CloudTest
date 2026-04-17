@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/BorrowService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GatewayService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UserService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shared-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -40,19 +40,19 @@ class BookControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long id = objectMapper.readTree(created).get("id").asLong();
+        long id = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/books/{id}/borrow", id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.availableStock").value(2));
+                .andExpect(jsonPath("$.body.availableStock").value(2));
 
         mockMvc.perform(post("/api/books/{id}/return", id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.availableStock").value(3));
+                .andExpect(jsonPath("$.body.availableStock").value(3));
     }
 
     @Test
@@ -70,7 +70,7 @@ class BookControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long id = objectMapper.readTree(created).get("id").asLong();
+        long id = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/books/{id}/return", id)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -94,7 +94,7 @@ class BookControllerApiTest {
                 .getResponse()
                 .getContentAsString();
 
-        long id = objectMapper.readTree(created).get("id").asLong();
+        long id = objectMapper.readTree(created).get("body").get("id").asLong();
 
         mockMvc.perform(post("/api/books/{id}/borrow", id)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -105,7 +105,7 @@ class BookControllerApiTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.availableStock").value(1));
+                .andExpect(jsonPath("$.body.availableStock").value(1));
 
         mockMvc.perform(post("/api/books/{id}/return", id)
                         .contentType(MediaType.APPLICATION_JSON)

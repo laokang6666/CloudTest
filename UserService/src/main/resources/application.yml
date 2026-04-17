@@ -2,6 +2,11 @@ spring:
   application:
     name: user-service
   cloud:
+    # 限流：在 Sentinel 控制台按资源名配置流控规则（authLogin / userCreate / userGet）
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8090
+      eager: true
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
