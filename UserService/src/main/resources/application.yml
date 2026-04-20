@@ -24,9 +24,9 @@ spring:
     active: dev
   config:
     import:
-      - optional:nacos:user-service-dev.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       - optional:nacos:user-db.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       - optional:nacos:management.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
       - optional:nacos:jwt.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
+      - optional:nacos:jpa.yaml?group=DEFAULT_GROUP&namespace=e85adfe2-9c4d-43f6-b4d5-ae811f5d41f2
 server:
   port: 8081

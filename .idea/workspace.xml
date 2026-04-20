@@ -5,43 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/fallback/DefaultFallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/handler/DefaultBlockHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/dto/ApiError.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/com/car/bookservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/test/java/com/car/bookservice/controller/BookControllerApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/test/java/com/car/bookservice/controller/BookControllerApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/BookFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/UserFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/client/UserFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/dto/ApiError.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/fallback/DefaultFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/fallback/DefaultFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/handler/DefaultBlockHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/senrinel/handler/DefaultBlockHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/java/com/car/borrowservice/service/impl/BorrowApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BorrowService/src/test/java/com/car/borrowservice/controller/BorrowControllerApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/test/java/com/car/borrowservice/controller/BorrowControllerApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/controller/FallbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/controller/FallbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/filter/security/JwtAuthGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/java/com/car/gatewayservice/filter/security/JwtAuthGatewayFilterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GatewayService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/dto/ApiError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/service/impl/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/car/userservice/service/impl/UserAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/car/userservice/controller/AuthLoginIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/car/userservice/controller/AuthLoginIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug-d57cc0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;laokangnb&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/laokangnb/CloudTest.git&quot;,
+    &quot;accountId&quot;: &quot;7b3499a8-ab47-401e-9d92-e05ee7c4ac6c&quot;
+  }
+}</component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -80,50 +69,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.BookService [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BookService [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BookService [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GatewayService [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GatewayService [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.UserService [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.UserService [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cloudTest [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cloudTest [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cloudTest [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BookServiceApplication (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.BookServiceApplication (2).executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.BookServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.BorrowServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.UserServiceApplication (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.UserServiceApplication (2).executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaProject/cloudTest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.BookService [clean].executor": "Run",
+    "Maven.BookService [compile].executor": "Run",
+    "Maven.BookService [install].executor": "Run",
+    "Maven.GatewayService [clean].executor": "Run",
+    "Maven.GatewayService [install].executor": "Run",
+    "Maven.UserService [clean].executor": "Run",
+    "Maven.UserService [install].executor": "Run",
+    "Maven.cloudTest [clean].executor": "Run",
+    "Maven.cloudTest [compile].executor": "Run",
+    "Maven.cloudTest [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BookServiceApplication (1).executor": "Debug",
+    "Spring Boot.BookServiceApplication (2).executor": "Debug",
+    "Spring Boot.BookServiceApplication.executor": "Debug",
+    "Spring Boot.BorrowServiceApplication.executor": "Debug",
+    "Spring Boot.GatewayServiceApplication.executor": "Debug",
+    "Spring Boot.UserServiceApplication (1).executor": "Debug",
+    "Spring Boot.UserServiceApplication (2).executor": "Debug",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaProject/cloudTest",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "application.passwordSafe",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -132,18 +121,6 @@
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="hiddenConfigurations">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <set>
-              <option value="UserServiceApplication (1)" />
-              <option value="UserServiceApplication (2)" />
-            </set>
-          </value>
-        </entry>
-      </map>
     </option>
     <option name="configurationStatuses">
       <map>
@@ -154,7 +131,7 @@
               <entry key="BookServiceApplication (1)" value="STOPPED" />
               <entry key="BookServiceApplication (2)" value="STOPPED" />
               <entry key="BorrowServiceApplication" value="STOPPED" />
-              <entry key="GatewayServiceApplication" value="STOPPED" />
+              <entry key="GatewayServiceApplication" value="FAILED" />
               <entry key="UserServiceApplication" value="STOPPED" />
               <entry key="UserServiceApplication (1)" value="STOPPED" />
               <entry key="UserServiceApplication (2)" value="STOPPED" />
@@ -253,6 +230,8 @@
       <workItem from="1776302102523" duration="12293000" />
       <workItem from="1776388189876" duration="12365000" />
       <workItem from="1776404420396" duration="3055000" />
+      <workItem from="1776647925881" duration="6810000" />
+      <workItem from="1776664948766" duration="145000" />
     </task>
     <servers />
   </component>
