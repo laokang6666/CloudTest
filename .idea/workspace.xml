@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1afe8f-54b4-4204-bc04-a96197c930d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BorrowService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,18 +96,6 @@
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="hiddenConfigurations">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <set>
-              <option value="UserServiceApplication (1)" />
-              <option value="UserServiceApplication (2)" />
-            </set>
-          </value>
-        </entry>
-      </map>
     </option>
     <option name="configurationStatuses">
       <map>
@@ -221,7 +205,7 @@
       <workItem from="1776302102523" duration="12293000" />
       <workItem from="1776388189876" duration="12365000" />
       <workItem from="1776404420396" duration="3055000" />
-      <workItem from="1776647925881" duration="5629000" />
+      <workItem from="1776647925881" duration="6810000" />
     </task>
     <servers />
   </component>
